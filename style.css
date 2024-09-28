@@ -45,7 +45,8 @@ img{
 }
 
 #form{
-    flex: 0 0 60%;
+    flex: 0 0 55%;
+    padding-left: 5%;
     text-align: left;
 
     display: flex;
@@ -79,7 +80,7 @@ form{
     align-items: center; 
 }
 
-#yes-no{
+.yes-no{
     box-shadow: 0 0 0 0;
     width: 4vh;
 }
@@ -91,19 +92,30 @@ p{
     margin-bottom: 0;
 }
 
-
-
 input, option, select{
     border-radius: 5vh;
-    height: 4vh;
-    width: 35vh;
+    height: 4.4vh;
+    width: 40vh;
     border: 2.5px solid rgb(196, 195, 195);
     box-shadow: 0 1px 0 0 rgb(196, 195, 195); 
     font-family: "Fredoka", sans-serif;
 }
+
+input:focus{
+    border: solid;
+    outline: none;
+    border-color: #b99801;
+}
+
+select:focus{
+    border: solid;
+    outline: none;
+    border-color: #b99801;
+}
+
 select{
-    height: 4.7vh;
-    width: 36vh;
+    height: 5.1vh;
+    width: 41vh;
 }
 
 #submit{
@@ -112,6 +124,8 @@ select{
     border-width: 2px;
     border-color: #b99801;
     color: white;
+    font-size: 3vh;
+    height: 7vh;
 }
 
     
