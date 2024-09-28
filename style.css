@@ -1,0 +1,113 @@
+html {
+    height: 100%;
+}
+
+body {
+   display: flex;
+    flex-direction: column;
+    min-height: 100%; 
+    margin: 0;
+    font-family: "Fredoka", sans-serif;
+}
+
+
+.nav-bar{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+
+    background-color: rgb(1, 2, 49);
+    margin: 0;
+    width:100%;
+
+}
+
+img{
+    margin: 4vh;
+    width: 13vh;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+#title {
+    flex: 0 0 30vh;
+    padding: 15vh 15vh 15vh 15vh;
+    font-family: "Roboto Slab", serif;
+    font-size: 6vh;
+    background-color: rgb(132, 132, 134);
+    color: rgb(3, 4, 54);
+    text-shadow: 2px 2px 0 #b99801; 
+}
+
+#form{
+    flex: 0 0 158vh;
+    text-align: left;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+
+form > h1{
+    font-size: 8vh;
+    color: rgb(40, 40, 63);
+    margin:0;
+    padding: 5vh 0 0 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/*gender-specific question */
+.radio-selector{
+    text-align: left;
+}
+
+.radio-selector label {
+    display: flex;
+    align-items: center; 
+}
+
+#yes-no{
+    box-shadow: 0 0 0 0;
+    width: 4vh;
+}
+
+/*other questions*/
+p{
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+
+    text-align: left;
+}
+
+
+
+input, option, select{
+    border-radius: 5vh;
+    height: 4vh;
+    width: 35vh;
+    border: 2.5px solid rgb(196, 195, 195);
+    box-shadow: 0 1px 0 0 rgb(196, 195, 195); 
+    font-family: "Fredoka", sans-serif;
+}
+select{
+    height: 4.7vh;
+    width: 36vh;
+}
+
+
+
+    

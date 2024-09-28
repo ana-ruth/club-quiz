@@ -4,13 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clubs Quiz</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script src="script.js" defer></script>
 
-    <div>
-        <h3>FIU</h3>
-        <h1>Club's Quiz</h1> 
+    <div class="nav-bar">
+        <img src="fiu-logo.png" alt="FIU Logo">
     </div>
+
+    <div class="main">
+
+        <div id="title">
+            <h1>CLUB MATCH</h1> 
+        </div>
+        
+        <div id="form">
+            
+            <form>
+                <h1>Find your club TODAY!</h1>
+
+                <p>
+                    <label>Name
+                        <br>
+                    <input type="text" id="Name">
+                    </label>
+                </p>
+
+                <p>
+                    <label> FIU Email
+                        <br>
+                    <input type="text" id="Email">
+                    </label>
+                </p>
+
+                
+            <p>
+                <label>What is your primary academic focus or field of interest? 
+                    <br>
+                    <select id="field">
+                        <option value="default">Choose...</option>
+                        <option>Engineering or Technology</option>
+                        <option>Health or Medicine</option>
+                        <option>Business or Management</option>
+                        <option>Arts or Humanities</option>
+                        <option>Social Sciences</option>
+                        <option>Other</option>
+
+                    </select>
+                </label>
+            </p>
+
+            <p>
+                <label for="level">Current Academic Level
+                    <br>
+                    <select id="level">
+                        <option value="default">Choose...</option>
+                        <option>Freshman/First-year student</option>
+                        <option>Sophomore/Second-year student</option>
+                        <option>Junior/Third-year student</option>
+                        <option>Senior/Fourth-year student</option>
+                        <option>Graduate student</option>
+
+                    </select>
+                </label>
+            </p>
+
+            <p id="gender-specific">Gender-Specific Club?</p>
+                <div class="radio-selector">
+                    <label></label>
+                        <input type="radio" name="gender-specific" value="Yes" id="yes-no">Yes 
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender-specific" value="No" id="yes-no">No 
+                    </label>
+                </div>
+            
+
+                
+            <p>
+                <label>What type of extracurricular activities are you most interested in? 
+                    <br>
+                    <select id="extracurricular">
+                        <option value="default">Choose...</option>
+                        <option>Sports and fitness</option>
+                        <option>Advocacy and social justice</option>
+                        <option>Cultural and community engagement</option>
+                        <option>Professional development and networking</option>
+                        <option>Creative or artistic expression</option>
+                    </select>
+                </label>
+            </p>
+
+
+            
+            <p id="volunteering">Do you prefer to join clubs focused on community service and volunteering? </p>
+            <div class="radio-selector">
+
+                <label>
+                    <input type="radio" name="volunteering" value="Yes" id="yes-no">Yes 
+                </label>
+
+                <label>
+                    <input type="radio" name="volunteering" value="No" id="yes-no">No 
+                </label>
+
+                <label>
+                    <input type="radio" name="volunteering" value="No" id="yes-no">Maybe 
+                </label>
+
+            </div>
+
+            <p id="ethnicity">Do you want to connect with a club related to your cultural or ethnic background? </p>
+            <div class="radio-selector">
+
+                <label>
+                    <input type="radio" name="ethnicity" value="Yes" id="yes-no">Yes 
+                </label>
+
+                <label>
+                    <input type="radio" name="ethnicity" value="No" id="yes-no">No 
+                </label>
+
+                <label>
+                    <input type="radio" name="ethnicity" value="No" id="yes-no">Maybe 
+                </label>
+            </div>
+
+            <input type="submit" value="Submit">
+
+            </form>   
+        </div>
+         
+
+    </div>
+
 
 
 </body>
