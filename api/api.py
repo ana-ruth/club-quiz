@@ -1,36 +1,51 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from .schemas import QuizResponse, ClubRecommendationResponse
+from fastapi import APIRouter
+import mysql.connector
+from .datab import Database
+
+router = APIRouter()
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello, World!"}
+# Configure CORS
+origins = [
+    "http://localhost:3000",  # React default port
+    "http://127.0.0.1:5500",  # Your frontend origin
+    "http://localhost:5500",  # Alternative frontend origin
+    "http://127.0.0.1:8000"
+]
 
-@app.post("/submit_quiz", response_model=ClubRecommendationResponse)
-def submit_quiz(response: QuizResponse):
-    # Mock logic for processing answers and generating recommendations
-    recommended_clubs = ["Women in Computer Science", "FIU Sustainability Club", "Volleyball Club", "Panther Robotics"]
-    # Create the response message
-    response_message = "Based on your answers, we recommend these clubs to enhance your student life at FIU."
-    return ClubRecommendationResponse(
-        message=response_message,
-        recommendations=recommended_clubs
-    )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["*"],
+    expose_headers=["*"],
+)
 
+db = Database.connect_to_database()
 
-@app.get("/clubs")
-def get_clubs():
-    # Mock data for available clubs
-    # This could be replaced with a database query in the future
-    clubs = [
-        {"id": 1, "name": "Women in Computer Science"},
-        {"id": 2, "name": "FIU Sustainability Club"},
-        {"id": 3, "name": "Volleyball Club"},
-        {"id": 4, "name": "Panther Robotics"},
-    ]
-    return {"clubs": clubs}
+@app.post("/quiz", response_model=ClubRecommendationResponse)
+async def process_quiz(quiz_data: QuizResponse):
+    db = Database.connect_to_database()
+    try:
+        recommendations_db = Database.handle_student_submission(db, quiz_data)
+        return ClubRecommendationResponse(recommendations=recommendations_db)
+    finally:
+        Database.close_database_connection(db)
+
+@app.on_event("startup")
+async def startup():
+    global db
+    db = Database.connect_to_database()
+
+@app.on_event("shutdown")
+async def shutdown():
+    Database.close_database_connection(db)
     
 if __name__ == "__main__":
     import uvicorn
