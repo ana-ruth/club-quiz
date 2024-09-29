@@ -44,7 +44,7 @@
                 <p>
                     <label> FIU Email
                     <br>
-                    <input type="text" id="Email">
+                    <input type="email" name="email" id="Email">
                     </label>
                 </p>
 
@@ -52,7 +52,7 @@
             <p>
                 <label>What is your primary academic focus or field of interest? 
                     <br>
-                    <select id="field">
+                    <select id="field" name="academic-field">
                         <option value="default">Choose...</option>
                         <option>Engineering or Technology</option>
                         <option>Health or Medicine</option>
@@ -68,7 +68,7 @@
             <p>
                 <label for="level">Current Academic Level
                     <br>
-                    <select id="level">
+                    <select id="level" name="level">
                         <option value="default">Choose...</option>
                         <option>Freshman/First-year student</option>
                         <option>Sophomore/Second-year student</option>
@@ -96,7 +96,7 @@
             <p>
                 <label>What type of extracurricular activities are you most interested in? 
                     <br>
-                    <select id="extracurricular">
+                    <select id="extracurricular" name="extracurricular">
                         <option value="default">Choose...</option>
                         <option>Sports and fitness</option>
                         <option>Advocacy and social justice</option>
@@ -121,7 +121,7 @@
                 </label>
 
                 <label>
-                    <input type="radio" name="volunteering" value="No" class="yes-no">Maybe 
+                    <input type="radio" name="volunteering" value="Maybe" class="yes-no">Maybe 
                 </label>
 
             </div>
@@ -139,13 +139,39 @@
             </div>
 
             <br>
-            <input type="submit" value="Submit" id="submit">
 
-            </form>   
+            <button type="button" onclick="getFormValues()">Submit</button>
+
+            </form>  
+            
+            
+            <!--  ///to view the variables on the website///
+                    <p id="result"></p>          
+            -->
+
+
         </div>
          
 
-    </div>
+        <!-- ///adapt this to display club results
+
+        <dialog id="dialog" open> 
+            <form>
+                <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+            </form>
+            
+            <h2>We Recommend You These Clubs: </h2>
+            <p id="club-results"></p>
+
+
+        </dialog>
+    -->
+
+
+
+
+
+    
 
 
 

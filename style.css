@@ -118,14 +118,17 @@ select{
     width: 41vh;
 }
 
-#submit{
+
+button{
     background-color: rgb(3, 4, 54);
     border: solid;
     border-width: 2px;
     border-color: #b99801;
+    border-radius: 5vh;
     color: white;
     font-size: 3vh;
     height: 7vh;
+    width: 25vh;
 }
 
     
