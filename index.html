@@ -140,7 +140,7 @@
 
             <br>
 
-            <button type="button" onclick="getFormValues()">Submit</button>
+            <button type="button" onclick="submitQuizResponse()">Submit</button>
 
             </form>  
             
@@ -153,27 +153,16 @@
         </div>
          
 
-        <!-- ///adapt this to display club results
-
-        <dialog id="dialog" open> 
+        <dialog id="dialog">
             <form>
                 <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
             </form>
             
-            <h2>We Recommend You These Clubs: </h2>
-            <p id="club-results"></p>
-
-
+            <h2>We Recommend These Clubs:</h2>
+            <ul id="club-results"></ul>
+            <p id="no-results" style="display: none;">No clubs match your preferences at this time.</p>
         </dialog>
-    -->
-
-
-
-
-
-    
-
-
-
+        
+    </div>          
 </body>
 </html>
