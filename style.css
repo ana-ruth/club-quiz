@@ -1,0 +1,134 @@
+html {
+    height: 100%;
+}
+
+body {
+   display: flex;
+    flex-direction: column;
+    min-height: 100%; 
+    margin: 0;
+    font-family: "Fredoka", sans-serif;
+}
+
+
+.nav-bar{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+
+    background-color: rgb(1, 2, 49);
+    margin: 0;
+    width:100%;
+
+}
+
+img{
+    margin: 4vh;
+    width: 13vh;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+#title {
+    flex: 0 0 30%;
+    padding: 5%;
+    font-family: "Roboto Slab", serif;
+    font-size: 6vh;
+    background-color: rgb(132, 132, 134);
+    color: rgb(3, 4, 54);
+    text-shadow: 2px 2px 0 #b99801; 
+}
+
+#form{
+    flex: 0 0 55%;
+    padding-left: 5%;
+    text-align: left;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+
+form > h1{
+    font-size: 8vh;
+    color: rgb(40, 40, 63);
+    margin:0;
+    padding: 5vh 0 0 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/*gender-specific question */
+.radio-selector{
+    text-align: left;
+}
+
+.radio-selector label {
+    display: flex;
+    align-items: center; 
+}
+
+.yes-no{
+    box-shadow: 0 0 0 0;
+    width: 4vh;
+}
+
+/*other questions*/
+p{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+input, option, select{
+    border-radius: 5vh;
+    height: 4.4vh;
+    width: 40vh;
+    border: 2.5px solid rgb(196, 195, 195);
+    box-shadow: 0 1px 0 0 rgb(196, 195, 195); 
+    font-family: "Fredoka", sans-serif;
+}
+
+input:focus{
+    border: solid;
+    outline: none;
+    border-color: #b99801;
+}
+
+select:focus{
+    border: solid;
+    outline: none;
+    border-color: #b99801;
+}
+
+select{
+    height: 5.1vh;
+    width: 41vh;
+}
+
+
+button{
+    background-color: rgb(3, 4, 54);
+    border: solid;
+    border-width: 2px;
+    border-color: #b99801;
+    border-radius: 5vh;
+    color: white;
+    font-size: 3vh;
+    height: 7vh;
+    width: 25vh;
+}
+
+    
