@@ -8,6 +8,8 @@ There are many clubs at FIU, which can make it daunting for students to decide w
 ## ⚙️ What It Does  
 The application recommends clubs based on user responses. Students answer a few short questions, and the system suggests clubs that align with their preferences, helping them get involved more easily on campus.
 
+Website: https://ana-ruth.github.io/club-quiz/
+
 ---
 
 ## 🛠️ How We Built It  
