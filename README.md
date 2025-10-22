@@ -11,6 +11,11 @@ The application recommends clubs based on user responses. Students answer a few 
 Website: https://ana-ruth.github.io/club-quiz/
 
 ---
+## 🧩 Project Preview
+![club_match2](https://github.com/user-attachments/assets/9ea6ec26-0229-4f82-805b-f948857baa80)
+
+
+---
 
 ## 🛠️ How We Built It  
 We built the project using several tools and technologies:  
